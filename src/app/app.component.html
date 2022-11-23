@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <app-cockpit (addServerEvent)="onAddServer($event)" (addBluePrintEvent)="onAddBlueprint($event)"></app-cockpit>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let serverElement of serverElements" [server-elements]="serverElement">
+      </app-server-element>
+    </div>
+  </div>
+
+</div>
